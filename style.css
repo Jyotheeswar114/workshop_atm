@@ -12,29 +12,33 @@ body {
     height: 100vh;
     width: 100%;
     margin: 0px;
-    background-color: rgb(197, 197, 221);
+    background-color: white;
     display: grid;
     justify-content: center;
 }
 
 #atm {
-    border: 5px dotted black;
     height: 600px;
     width: 400px;
     margin: auto;
-    background-color: maroon;
+    background-color: rgb(107, 25, 107);
+    border-radius: 10px;
 }
 
 button {
-    font-size: 30px;
+    font-size: 22px;
+    height: 60px;
+    width: 200px;
     border-radius: 5px;
     cursor: pointer;
     padding: 10px;
     margin: 10px;
+    border: none;
+    box-shadow: 5px 5px 5px #444;
 }
 
 .primary-button {
-    background-color: blue;
+    background-color: rgb(68, 68, 185);
     color: wheat;
 }
 
@@ -45,7 +49,6 @@ button {
 
 .atm-header {
     text-align: center;
-    border-bottom: 5px dotted black;
     padding-bottom: 10px;
     color: floralwhite;
     font-family: system-ui;
@@ -57,7 +60,8 @@ button {
 }
 .screen {
     height: 200px;
-    border: 10px solid #c73434;
+    /* border: 10px solid #c73434; */
+    border-radius: 10px;
     margin: 20px;
     display: grid;
     justify-content: center;

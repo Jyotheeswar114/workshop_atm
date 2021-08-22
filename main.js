@@ -5588,7 +5588,7 @@ var $author$project$Main$view = function (model) {
 								_List_Nil,
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Welcome to ABC ATM.')
+										$elm$html$Html$text('Welcome')
 									]))
 							])) : $elm$html$Html$text(''),
 						(!model.level) ? A2(
