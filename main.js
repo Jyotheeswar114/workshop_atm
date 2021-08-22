@@ -5213,10 +5213,10 @@ var $author$project$Main$update = F2(
 				return _Utils_update(
 					model,
 					{
-						balance: A2(
+						balance: model.balance - A2(
 							$elm$core$Maybe$withDefault,
 							0,
-							$elm$core$String$toInt(model.enteredAmount)) + model.balance,
+							$elm$core$String$toInt(model.enteredAmount)),
 						level: 6
 					});
 		}
@@ -5234,6 +5234,11 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$core$String$cons = _String_cons;
+var $elm$core$String$fromChar = function (_char) {
+	return A2($elm$core$String$cons, _char, '');
+};
+var $elm$core$Char$fromCode = _Char_fromCode;
 var $author$project$Main$GoToMainMenu = {$: 'GoToMainMenu'};
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$virtual_dom$VirtualDom$Normal = function (a) {
@@ -5287,6 +5292,15 @@ var $author$project$Main$amount_deposited = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$text('Your amount has been deposited')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text(
+								'Your account has ' + ($elm$core$String$fromChar(
+									$elm$core$Char$fromCode(8377)) + $elm$core$String$fromInt(model.balance)))
 							]))
 					])),
 				$author$project$Main$goto_main_menu
@@ -5312,6 +5326,15 @@ var $author$project$Main$amount_with_drawn = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$text('Your amount has been With Drwan')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text(
+								'Your account has ' + ($elm$core$String$fromChar(
+									$elm$core$Char$fromCode(8377)) + $elm$core$String$fromInt(model.balance)))
 							]))
 					])),
 				$author$project$Main$goto_main_menu
@@ -5422,26 +5445,16 @@ var $author$project$Main$ask_with_draw = function (model) {
 						_List_Nil,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('Enter the amount you are going to withdraw')
-							])),
-						A2(
-						$elm$html$Html$p,
-						_List_Nil,
-						_List_fromArray(
-							[
-								$elm$html$Html$text(model.enteredAmount)
-							])),
-						A2(
-						$elm$html$Html$p,
-						_List_Nil,
-						_List_fromArray(
-							[
 								$elm$html$Html$text(
-								$elm$core$String$fromInt(
-									model.balance + A2(
-										$elm$core$Maybe$withDefault,
-										0,
-										$elm$core$String$toInt(model.enteredAmount))))
+								'Your account has ' + ($elm$core$String$fromChar(
+									$elm$core$Char$fromCode(8377)) + $elm$core$String$fromInt(model.balance)))
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Enter the amount you are going to withdraw')
 							])),
 						A2(
 						$elm$html$Html$input,
@@ -5489,7 +5502,8 @@ var $author$project$Main$show_balance = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$text(
-								'Your account has ' + ($elm$core$String$fromInt(model.balance) + ' rupees'))
+								'Your account has ' + ($elm$core$String$fromChar(
+									$elm$core$Char$fromCode(8377)) + $elm$core$String$fromInt(model.balance)))
 							]))
 					])),
 				$author$project$Main$goto_main_menu
