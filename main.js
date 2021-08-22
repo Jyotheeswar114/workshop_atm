@@ -5325,7 +5325,7 @@ var $author$project$Main$amount_with_drawn = function (model) {
 						_List_Nil,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('Your amount has been With Drwan')
+								$elm$html$Html$text('Your amount has been withdrawn')
 							])),
 						A2(
 						$elm$html$Html$p,
