@@ -5303,7 +5303,14 @@ var $author$project$Main$amount_deposited = function (model) {
 									$elm$core$Char$fromCode(8377)) + $elm$core$String$fromInt(model.balance)))
 							]))
 					])),
-				$author$project$Main$goto_main_menu
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('buttons-space')
+					]),
+				_List_fromArray(
+					[$author$project$Main$goto_main_menu]))
 			]));
 };
 var $author$project$Main$amount_with_drawn = function (model) {
@@ -5337,7 +5344,14 @@ var $author$project$Main$amount_with_drawn = function (model) {
 									$elm$core$Char$fromCode(8377)) + $elm$core$String$fromInt(model.balance)))
 							]))
 					])),
-				$author$project$Main$goto_main_menu
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('buttons-space')
+					]),
+				_List_fromArray(
+					[$author$project$Main$goto_main_menu]))
 			]));
 };
 var $author$project$Main$ChangeEnteredAmount = function (a) {
@@ -5412,17 +5426,26 @@ var $author$project$Main$ask_deposit = function (model) {
 						_List_Nil)
 					])),
 				A2(
-				$elm$html$Html$button,
+				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Events$onClick($author$project$Main$DepositMoney),
-						$elm$html$Html$Attributes$class('primary-button')
+						$elm$html$Html$Attributes$class('buttons-space')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Confirm')
-					])),
-				$author$project$Main$goto_main_menu
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick($author$project$Main$DepositMoney),
+								$elm$html$Html$Attributes$class('primary-button')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Confirm')
+							])),
+						$author$project$Main$goto_main_menu
+					]))
 			]));
 };
 var $author$project$Main$WithDrawMoney = {$: 'WithDrawMoney'};
@@ -5467,17 +5490,26 @@ var $author$project$Main$ask_with_draw = function (model) {
 						_List_Nil)
 					])),
 				A2(
-				$elm$html$Html$button,
+				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Events$onClick($author$project$Main$WithDrawMoney),
-						$elm$html$Html$Attributes$class('primary-button')
+						$elm$html$Html$Attributes$class('buttons-space')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Confirm')
-					])),
-				$author$project$Main$goto_main_menu
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick($author$project$Main$WithDrawMoney),
+								$elm$html$Html$Attributes$class('primary-button')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Confirm')
+							])),
+						$author$project$Main$goto_main_menu
+					]))
 			]));
 };
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
@@ -5506,7 +5538,14 @@ var $author$project$Main$show_balance = function (model) {
 									$elm$core$Char$fromCode(8377)) + $elm$core$String$fromInt(model.balance)))
 							]))
 					])),
-				$author$project$Main$goto_main_menu
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('buttons-space')
+					]),
+				_List_fromArray(
+					[$author$project$Main$goto_main_menu]))
 			]));
 };
 var $author$project$Main$view = function (model) {
